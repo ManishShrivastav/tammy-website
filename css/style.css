@@ -220,9 +220,8 @@ img {
 
 .mini-gallery img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  min-height: 0;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: 18px;
 }
 
@@ -341,6 +340,13 @@ img {
 .pricing-list {
   display: grid;
   gap: 12px;
+}
+
+.pricing-list img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(42, 33, 29, 0.06);
 }
 
 .pricing-row {
