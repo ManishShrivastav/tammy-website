@@ -404,18 +404,22 @@ img {
   text-align: right;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.gallery-strip {
+  display: flex;
   gap: 18px;
+  overflow-x: auto;
+  padding: 0 0 12px;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: var(--primary) transparent;
 }
 
-.gallery-grid img {
-  width: 100%;
+.gallery-strip img {
+  flex: 0 0 min(360px, 78vw);
   height: 250px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 14px 24px rgba(42, 33, 29, 0.08);
+  scroll-snap-align: start;
 }
 
 .review-layout {
@@ -657,8 +661,7 @@ img {
   .about-layout,
   .review-layout,
   .service-grid,
-  .contact-grid,
-  .gallery-grid {
+  .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -686,8 +689,7 @@ img {
   .about-layout,
   .review-layout,
   .service-grid,
-  .contact-grid,
-  .gallery-grid {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
