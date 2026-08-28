@@ -414,8 +414,8 @@ img {
 }
 
 .gallery-strip img {
-  flex: 0 0 min(360px, 78vw);
-  height: 250px;
+  flex: 0 0 min(420px, 88vw);
+  height: 300px;
   object-fit: cover;
   border-radius: 18px;
   box-shadow: 0 14px 24px rgba(42, 33, 29, 0.08);
