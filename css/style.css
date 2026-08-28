@@ -141,7 +141,7 @@ img {
 
 .hero {
   background: linear-gradient(135deg, #fffaf6, #f4e6d8 42%, #f9f0e8);
-  padding: 72px 0 54px;
+  padding: 64px 0 48px;
 }
 
 .hero-grid {
@@ -273,7 +273,7 @@ img {
 }
 
 .section {
-  padding: 82px 0;
+  padding: 64px 0;
 }
 
 .section-alt {
@@ -288,14 +288,23 @@ img {
   text-align: center;
 }
 
-.split-section {
+.about-layout {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1.3fr);
   gap: 28px;
-  align-items: start;
+  align-items: center;
+}
+
+.about-profile img {
+  width: min(100%, 300px);
+  height: auto;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
 }
 
 .about-copy {
+  grid-column: 1 / -1;
   font-size: 1.05rem;
 }
 
@@ -333,8 +342,8 @@ img {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 38px;
   align-items: center;
-  margin-top: 46px;
-  padding-top: 42px;
+  margin-top: 32px;
+  padding-top: 32px;
   border-top: 1px solid var(--border);
 }
 
@@ -453,7 +462,7 @@ img {
 }
 
 .booking-section {
-  padding-top: 18px;
+  padding-top: 16px;
 }
 
 .booking-box {
@@ -645,7 +654,7 @@ img {
 
 @media (max-width: 900px) {
   .hero-grid,
-  .split-section,
+  .about-layout,
   .review-layout,
   .service-grid,
   .contact-grid,
@@ -674,7 +683,7 @@ img {
 
 @media (max-width: 640px) {
   .hero-grid,
-  .split-section,
+  .about-layout,
   .review-layout,
   .service-grid,
   .contact-grid,
@@ -721,11 +730,11 @@ img {
   }
 
   .hero {
-    padding: 48px 0 38px;
+    padding: 44px 0 34px;
   }
 
   .section {
-    padding: 58px 0;
+    padding: 48px 0;
   }
 
   .hero-copy h1,
